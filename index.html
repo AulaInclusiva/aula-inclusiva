@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Aula Inclusiva · Enlaces</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --navy:#082C63;
+    --pink:#F894B2;
+    --teal:#82CBCC;
+    --lilac:#A38FC5;
+    --cream:#FBF8F4;
+  }
+
+  *{box-sizing:border-box;}
+
+  body{
+    margin:0;
+    min-height:100vh;
+    background:var(--cream);
+    background-image:
+      radial-gradient(circle at 8% 12%, rgba(163,143,197,0.14) 0, transparent 40%),
+      radial-gradient(circle at 92% 20%, rgba(130,203,204,0.16) 0, transparent 42%),
+      radial-gradient(circle at 12% 88%, rgba(248,148,178,0.14) 0, transparent 40%);
+    font-family:'Quicksand', sans-serif;
+    color:var(--navy);
+    display:flex;
+    justify-content:center;
+    padding:28px 16px 0;
+  }
+
+  .page{
+    width:100%;
+    max-width:460px;
+  }
+
+  .banner{
+    width:100%;
+    border-radius:22px;
+    overflow:hidden;
+    box-shadow:0 14px 30px -12px rgba(8,44,99,0.35);
+    border:3px solid var(--navy);
+  }
+  .banner img{
+    display:block;
+    width:100%;
+    height:auto;
+  }
+
+  .links{
+    margin-top:26px;
+    display:flex;
+    flex-direction:column;
+    gap:14px;
+  }
+
+  .link-card{
+    --accent: var(--teal);
+    position:relative;
+    display:flex;
+    align-items:center;
+    gap:14px;
+    background:#fff;
+    border:2px solid var(--navy);
+    border-radius:18px;
+    padding:14px 18px;
+    text-decoration:none;
+    color:var(--navy);
+    box-shadow:0 3px 0 var(--navy);
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .link-card:hover, .link-card:focus-visible{
+    transform:translate(-2px,-2px);
+    box-shadow:5px 5px 0 var(--navy);
+    outline:none;
+  }
+  .link-card:active{
+    transform:translate(0,0);
+    box-shadow:1px 1px 0 var(--navy);
+  }
+
+  .icon-wrap{
+    flex:none;
+    width:46px;
+    height:46px;
+    border-radius:50%;
+    background:var(--accent);
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 0 0 3px #fff, 0 0 0 5px var(--accent);
+  }
+  .icon-wrap svg{width:22px;height:22px;fill:#fff;}
+
+  .link-text{flex:1;min-width:0;}
+  .link-title{
+    font-family:'Baloo 2', sans-serif;
+    font-weight:700;
+    font-size:1.02rem;
+    line-height:1.15;
+  }
+  .link-sub{
+    font-size:0.82rem;
+    color:#5b6a86;
+    margin-top:2px;
+    white-space:nowrap;
+    overflow:hidden;
+    text-overflow:ellipsis;
+  }
+
+  .arrow{flex:none;color:var(--navy);opacity:.55;font-size:1.1rem;}
+
+  .tienda{--accent:var(--purple, var(--lilac));}
+  .facebook{--accent:#4267ff;}
+  .instagram{--accent:var(--pink);}
+  .correo{--accent:var(--teal);}
+
+  .footer{
+    margin:30px -16px 0;
+    background:var(--pink);
+    padding:16px 16px 18px;
+    text-align:center;
+    border-top:3px solid var(--navy);
+  }
+  .footer-tagline{
+    font-family:'Baloo 2', sans-serif;
+    font-weight:700;
+    color:var(--navy);
+    font-size:1rem;
+  }
+  .footer-tagline em{color:#fff;font-style:italic;}
+  .footer-brand{
+    margin-top:8px;
+    font-size:0.78rem;
+    color:var(--navy);
+    opacity:.85;
+  }
+</style>
+</head>
+<body>
+  <div class="page">
+
+    <div class="banner">
+      <img src="banner.png" alt="Aula Inclusiva — Recursos hechos con pasión para maestros que inspiran">
+    </div>
+
+    <nav class="links">
+
+      <a class="link-card tienda" href="https://payhip.com/AulaInclusiva" target="_blank" rel="noopener">
+        <span class="icon-wrap" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M6 2 3 7v13a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7l-3-5H6zm2.5 9a3.5 3.5 0 0 0 7 0h2A5.5 5.5 0 0 1 6.5 11h2z"/></svg>
+        </span>
+        <span class="link-text">
+          <div class="link-title">Explora la tienda</div>
+          <div class="link-sub">Recursos listos para tu salón</div>
+        </span>
+        <span class="arrow">→</span>
+      </a>
+
+      <a class="link-card facebook" href="https://www.facebook.com/profile.php?id=61590578286474" target="_blank" rel="noopener">
+        <span class="icon-wrap" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M13.5 21v-7.2h2.4l.4-2.8h-2.8V9.1c0-.8.2-1.4 1.4-1.4h1.5V5.2C15.9 5.1 15 5 14 5c-2.2 0-3.7 1.3-3.7 3.8v2.2H7.9v2.8h2.4V21h3.2z"/></svg>
+        </span>
+        <span class="link-text">
+          <div class="link-title">Escríbenos por Facebook</div>
+          <div class="link-sub">@aulainclusiva</div>
+        </span>
+        <span class="arrow">→</span>
+      </a>
+
+      <a class="link-card correo" href="mailto:aulainclusiva26@gmail.com">
+        <span class="icon-wrap" aria-hidden="true">
+          <svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm0 2v.01L12 12l8-5.99V6H4zm16 12V8.24l-7.4 5.55a1 1 0 0 1-1.2 0L4 8.24V18h16z"/></svg>
+        </span>
+        <span class="link-text">
+          <div class="link-title">Envíanos un correo</div>
+          <div class="link-sub">aulainclusiva26@gmail.com</div>
+        </span>
+        <span class="arrow">→</span>
+      </a>
+
+    </nav>
+
+    <div class="footer">
+      <div class="footer-tagline">¡Porque enseñar con amor <em>transforma vidas!</em> 💗</div>
+      <div class="footer-brand">Aula Inclusiva · Recursos para maestros de educación especial</div>
+    </div>
+
+  </div>
+</body>
+</html>
