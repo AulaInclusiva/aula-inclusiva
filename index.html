@@ -9,7 +9,68 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+.hero-pro{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  align-items:center;
+  gap:24px;
+}
 
+.hero-pro-visual{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.hero-product{
+  display:block;
+  width:min(100%, 420px);
+  height:auto;
+  object-fit:contain;
+}
+
+@media (max-width: 700px){
+  .hero-pro{
+    grid-template-columns:1fr;
+    gap:16px;
+  }
+
+  .hero-pro-text{
+    text-align:left;
+  }
+
+  .hero-product{
+    width:min(88vw, 360px);
+    margin:0 auto;
+  }
+}.hero-pro{
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  align-items:center;
+  gap:24px;
+}
+
+.hero-pro-visual{
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.hero-product{
+  display:block;
+  width:min(100%, 420px);
+  height:auto;
+  object-fit:contain;
+}
+
+@media (max-width: 700px){
+  .hero-pro{
+    grid-template-columns:1fr;
+    gap:16px;
+  }
+
+
+}
 <style>
 :root{
   --navy:#082C63;
@@ -314,6 +375,22 @@ footer p{
     max-width: 100%;
     height: auto;
     object-fit: contain;
+  }
+}
+@media (max-width:700px){
+  .hero-pro-visual{
+    display:flex;
+    justify-content:center;
+    align-items:center;
+  }
+
+  .hero-agenda{
+    width:82%;
+    max-width:360px;
+    height:auto;
+    object-fit:contain;
+    margin:0 auto;
+    display:block;
   }
 }
 </style>
