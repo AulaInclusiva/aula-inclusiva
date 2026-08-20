@@ -9,69 +9,68 @@
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
-<style>.hero-pro{
+<style>
+
+.hero-pro{
+  width:100%;
+  max-width:1200px;
+  margin:0 auto;
+  padding:45px 6%;
   display:grid;
-  grid-template-columns:1.1fr .9fr;
+  grid-template-columns:1fr 1fr;
   align-items:center;
-  gap:24px;
+  gap:35px;
+  background:#fff8f6;
+}
+
+.hero-pro-text{
+  text-align:left;
 }
 
 .hero-pro-visual{
   display:flex;
   justify-content:center;
-  align-items:center;
+  align-items:flex-end;
+  overflow:hidden;
 }
 
 .hero-product{
   display:block;
-  width:min(100%, 420px);
+  width:100%;
+  max-width:480px;
   height:auto;
   object-fit:contain;
 }
 
-@media (max-width: 700px){
+.hero-agenda{
+  width:100%;
+  max-width:480px;
+}
+
+@media (max-width:700px){
   .hero-pro{
     grid-template-columns:1fr;
-    gap:16px;
+    padding:28px 20px 0;
+    gap:18px;
   }
 
   .hero-pro-text{
     text-align:left;
   }
 
-  .hero-product{
-    width:min(88vw, 360px);
+  .hero-pro-visual{
+    width:100%;
+    justify-content:center;
+  }
+
+  .hero-product,
+  .hero-agenda{
+    width:82%;
+    max-width:340px;
+    height:auto;
     margin:0 auto;
   }
-}.hero-pro{
-  display:grid;
-  grid-template-columns:1.1fr .9fr;
-  align-items:center;
-  gap:24px;
 }
-
-.hero-pro-visual{
-  display:flex;
-  justify-content:center;
-  align-items:center;
-}
-
-.hero-product{
-  display:block;
-  width:min(100%, 420px);
-  height:auto;
-  object-fit:contain;
-}
-
-@media (max-width: 700px){
-  .hero-pro{
-    grid-template-columns:1fr;
-    gap:16px;
-  }
-
-
-}
-
 :root{
   --navy:#082C63;
   --pink:#F894B2;
