@@ -4,25 +4,23 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<title>Aula Inclusiva | Recursos para docentes</title>
+<title>Aula Inclusiva</title>
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Allura&family=Baloo+2:wght@500;600;700;800&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
 
 <style>
 
 :root{
   --navy:#082C63;
-  --pink:#F894B2;
   --fuchsia:#EB2E7A;
+  --pink:#F894B2;
   --teal:#28B9C3;
   --blue:#1359A6;
   --cream:#FFF8F6;
-  --white:#FFFFFF;
-  --soft-pink:#FFF2F6;
-  --soft-blue:#F3F8FF;
-  --soft-teal:#EEFCFC;
+  --lightblue:#EEF8FC;
 }
 
 *{
@@ -35,9 +33,9 @@ html{
 
 body{
   margin:0;
-  background:var(--cream);
-  font-family:'Quicksand',sans-serif;
+  background:#fff;
   color:var(--navy);
+  font-family:'Quicksand',sans-serif;
 }
 
 img{
@@ -45,621 +43,647 @@ img{
   max-width:100%;
 }
 
-/* ==============================
-   BARRA SUPERIOR
-============================== */
-
-.topbar{
-  background:var(--navy);
-  color:white;
-  padding:12px 5%;
+a{
+  text-decoration:none;
 }
 
-.topbar-inner{
-  max-width:1200px;
+/* =========================
+   CONTENEDOR GENERAL
+========================= */
+
+.page{
+  width:100%;
+  overflow:hidden;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+.header{
+  background:var(--navy);
+  color:#fff;
+}
+
+.header-inner{
+  max-width:1100px;
   margin:auto;
+  min-height:74px;
+  padding:9px 22px;
   display:flex;
   align-items:center;
   justify-content:space-between;
-  gap:20px;
 }
 
 .brand{
   display:flex;
   align-items:center;
-  gap:10px;
-  font-family:'Baloo 2',sans-serif;
-  font-size:23px;
-  font-weight:800;
+  gap:11px;
 }
 
-.brand-ai{
-  width:42px;
-  height:42px;
+.logo{
+  width:55px;
+  height:55px;
+  object-fit:contain;
   border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  background:var(--fuchsia);
-  border:3px solid white;
-  color:white;
-  font-size:21px;
-  font-weight:800;
 }
 
-.brand-name span{
+.brand-text{
+  font-family:'Allura',cursive;
+  font-size:38px;
+  color:#fff;
+  line-height:1;
+}
+
+.brand-text span{
   color:var(--pink);
 }
 
-.nav{
+.header-right{
   display:flex;
-  gap:24px;
   align-items:center;
+  gap:15px;
 }
 
-.nav a{
-  color:white;
-  text-decoration:none;
-  font-size:13px;
+.header-link{
+  color:#fff;
+  font-size:12px;
   font-weight:700;
 }
 
-.nav a:hover{
-  color:var(--pink);
+.shop-button{
+  background:var(--fuchsia);
+  color:#fff;
+  padding:9px 15px;
+  border-radius:999px;
+  font-size:10px;
+  font-weight:800;
 }
 
-/* ==============================
-   HERO
-============================== */
+/* =========================
+   HERO ROSA
+========================= */
 
-.hero-pro{
-  width:100%;
-  background:linear-gradient(135deg,#FFF8F6 0%,#FFFFFF 62%,#FFF0F5 100%);
+.hero{
+  background:
+    radial-gradient(circle at 88% 15%,rgba(255,255,255,.55),transparent 26%),
+    linear-gradient(110deg,#F7A5BD 0%,#F8BDD0 48%,#FAD5E1 100%);
 }
 
 .hero-inner{
-  width:100%;
-  max-width:1200px;
-  min-height:560px;
+  max-width:1100px;
   margin:auto;
-  padding:55px 6% 0;
+  min-height:350px;
+  padding:26px 6% 0;
   display:grid;
   grid-template-columns:1fr 1fr;
-  align-items:center;
-  gap:35px;
-  overflow:hidden;
-}
-
-.hero-pro-text{
-  position:relative;
-  z-index:2;
-}
-
-.hero-tag{
-  display:inline-block;
-  margin-bottom:16px;
-  color:var(--teal);
-  font-size:14px;
-  font-weight:800;
-  letter-spacing:1.4px;
-}
-
-.hero-pro h1{
-  margin:0;
-  font-family:'Baloo 2',sans-serif;
-  font-size:clamp(43px,5.2vw,68px);
-  line-height:.98;
-  color:var(--navy);
-}
-
-.hero-pro h1 .accent{
-  color:var(--fuchsia);
-}
-
-.hero-pro p{
-  max-width:570px;
-  margin:22px 0 25px;
-  font-size:18px;
-  line-height:1.55;
-  font-weight:600;
-}
-
-.hero-buttons{
-  display:flex;
-  flex-wrap:wrap;
+  align-items:end;
   gap:12px;
 }
 
-.btn{
-  display:inline-flex;
-  align-items:center;
-  justify-content:center;
-  min-height:48px;
-  padding:12px 22px;
-  border-radius:999px;
-  text-decoration:none;
-  font-size:13px;
+.hero-copy{
+  align-self:center;
+  padding-bottom:28px;
+}
+
+.hero-kicker{
+  font-size:11px;
   font-weight:800;
-  letter-spacing:.4px;
-}
-
-.btn-primary{
-  background:var(--fuchsia);
-  color:white;
-  box-shadow:0 8px 22px rgba(235,46,122,.20);
-}
-
-.btn-secondary{
-  background:white;
+  letter-spacing:.8px;
   color:var(--navy);
-  border:2px solid var(--teal);
 }
 
-.hero-pro-visual{
+.hero h1{
+  margin:7px 0 0;
+  font-family:'Baloo 2',sans-serif;
+  font-size:52px;
+  line-height:.92;
+  color:var(--navy);
+}
+
+.hero h1 span{
+  display:block;
+  color:var(--fuchsia);
+}
+
+.hero p{
+  max-width:400px;
+  margin:13px 0 15px;
+  font-size:14px;
+  line-height:1.45;
+  font-weight:700;
+}
+
+.mini-pills{
+  display:flex;
+  flex-wrap:wrap;
+  gap:7px;
+}
+
+.mini-pill{
+  background:#fff;
+  padding:6px 10px;
+  border-radius:999px;
+  font-size:9px;
+  font-weight:800;
+}
+
+.hero-image-wrap{
+  display:flex;
+  align-items:flex-end;
+  justify-content:center;
+  overflow:hidden;
+}
+
+.hero-image{
+  width:min(100%,430px);
+  max-height:340px;
+  object-fit:contain;
+  object-position:center bottom;
+}
+
+/* =========================
+   NAVY STRIP
+========================= */
+
+.middle-strip{
+  background:var(--navy);
+  color:#fff;
+}
+
+.middle-inner{
+  max-width:1100px;
+  margin:auto;
+  min-height:120px;
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  align-items:center;
+  gap:15px;
+  padding:14px 6%;
+}
+
+.middle-image-wrap{
+  display:flex;
+  justify-content:center;
+}
+
+.middle-image{
+  max-height:105px;
+  width:auto;
+  object-fit:contain;
+}
+
+.middle-title{
+  font-family:'Baloo 2',sans-serif;
+  font-size:40px;
+  line-height:.95;
+}
+
+.middle-title span{
+  color:var(--pink);
+}
+
+/* =========================
+   BLOCKS
+========================= */
+
+.feature{
+  overflow:hidden;
+}
+
+.feature-inner{
+  max-width:1100px;
+  margin:auto;
+  min-height:300px;
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  align-items:end;
+  gap:20px;
+  padding:25px 6% 0;
+}
+
+.feature-copy{
+  align-self:center;
+  padding-bottom:24px;
+}
+
+.feature-kicker{
+  font-size:10px;
+  font-weight:800;
+  letter-spacing:.8px;
+  color:var(--teal);
+}
+
+.feature h2{
+  margin:7px 0 0;
+  font-family:'Baloo 2',sans-serif;
+  font-size:42px;
+  line-height:.95;
+  color:var(--navy);
+}
+
+.feature h2 span{
+  color:var(--fuchsia);
+}
+
+.feature p{
+  max-width:400px;
+  margin:11px 0 14px;
+  font-size:13px;
+  line-height:1.45;
+  font-weight:600;
+}
+
+.feature-image-wrap{
   height:100%;
   display:flex;
   align-items:flex-end;
   justify-content:center;
-}
-
-.hero-product{
-  width:min(100%,500px);
-  max-height:535px;
-  object-fit:contain;
-  object-position:center bottom;
-}
-
-/* ==============================
-   PRESENTACIÓN DE MARCA
-============================== */
-
-.brand-intro{
-  padding:34px 20px;
-  text-align:center;
-  background:white;
-  border-top:1px solid rgba(8,44,99,.06);
-  border-bottom:1px solid rgba(8,44,99,.06);
-}
-
-.brand-intro h2{
-  margin:0;
-  font-family:'Baloo 2',sans-serif;
-  font-size:36px;
-  line-height:1;
-}
-
-.brand-intro h2 span{
-  color:var(--fuchsia);
-}
-
-.brand-intro p{
-  max-width:720px;
-  margin:10px auto 0;
-  font-size:16px;
-  line-height:1.5;
-  font-weight:600;
-}
-
-/* ==============================
-   BLOQUES DE PRODUCTOS
-============================== */
-
-.product-section{
   overflow:hidden;
 }
 
-.product-row{
-  max-width:1200px;
-  min-height:420px;
-  margin:auto;
-  padding:38px 6% 0;
-  display:grid;
-  grid-template-columns:1fr 1fr;
-  align-items:center;
-  gap:42px;
-}
-
-.product-section.white{
-  background:white;
-}
-
-.product-section.soft-pink{
-  background:var(--soft-pink);
-}
-
-.product-section.soft-blue{
-  background:var(--soft-blue);
-}
-
-.product-visual{
-  align-self:end;
-  display:flex;
-  justify-content:center;
-  align-items:flex-end;
-  min-height:360px;
-}
-
-.product-visual img{
-  width:min(100%,430px);
-  max-height:400px;
+.feature-image{
+  width:auto;
+  max-width:100%;
+  max-height:285px;
   object-fit:contain;
   object-position:center bottom;
 }
 
-.product-copy{
-  padding:30px 0 45px;
+.feature-blue{
+  background:#EEF8FC;
 }
 
-.product-icon{
-  width:58px;
-  height:58px;
-  margin-bottom:15px;
-  border-radius:50%;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  color:white;
-  font-size:27px;
-  background:var(--navy);
+.feature-pink{
+  background:#FFF0F5;
 }
 
-.product-copy h2{
-  margin:0;
-  font-family:'Baloo 2',sans-serif;
-  font-size:clamp(34px,4vw,50px);
-  line-height:1;
-  color:var(--navy);
+.feature-white{
+  background:#fff;
 }
 
-.product-copy h2 span{
-  color:var(--fuchsia);
-}
-
-.product-copy p{
-  max-width:470px;
-  margin:17px 0 20px;
-  font-size:17px;
-  line-height:1.5;
-  font-weight:600;
-}
-
-.mini-benefits{
-  display:flex;
-  flex-wrap:wrap;
-  gap:9px;
-  margin-top:14px;
-}
-
-.mini-benefits span{
-  background:white;
-  border-radius:999px;
-  padding:8px 13px;
-  font-size:12px;
-  font-weight:800;
-  box-shadow:0 4px 13px rgba(8,44,99,.08);
-}
-
-.reverse .product-copy{
-  order:1;
-}
-
-.reverse .product-visual{
+.reverse .feature-copy{
   order:2;
 }
 
-/* ==============================
-   FRANJA FINAL
-============================== */
+.reverse .feature-image-wrap{
+  order:1;
+}
 
-.digital-strip{
+/* =========================
+   CTA BLUE BAR
+========================= */
+
+.cta-bar{
   background:var(--navy);
-  color:white;
-  padding:24px 6%;
+  color:#fff;
+  text-align:center;
+  padding:18px 15px;
 }
 
-.digital-strip-inner{
-  max-width:1200px;
-  margin:auto;
-  display:flex;
-  justify-content:space-between;
-  align-items:center;
-  gap:22px;
-}
-
-.digital-strip strong{
-  display:block;
+.cta-main{
   font-family:'Baloo 2',sans-serif;
-  font-size:25px;
-  line-height:1.05;
+  font-size:23px;
+  font-weight:800;
+  line-height:1;
 }
 
-.digital-strip strong span{
+.cta-main span{
   color:var(--teal);
 }
 
-.digital-strip p{
-  margin:3px 0 0;
-  font-size:13px;
+.cta-sub{
+  margin-top:5px;
+  font-size:11px;
 }
 
-/* ==============================
-   ENLACES
-============================== */
+/* =========================
+   BRAND / LINKS
+========================= */
 
-.links-area{
-  background:white;
-  padding:28px 5% 38px;
+.brand-section{
+  text-align:center;
+  background:#fff;
+  padding:25px 15px 18px;
+}
+
+.brand-script{
+  margin:0;
+  font-family:'Allura',cursive;
+  font-size:50px;
+  font-weight:400;
+  line-height:.9;
+  color:var(--navy);
+}
+
+.brand-script span{
+  color:var(--fuchsia);
+}
+
+.brand-tagline{
+  margin-top:7px;
+  font-size:11px;
+  font-weight:700;
 }
 
 .links{
-  max-width:1000px;
+  width:min(100%,700px);
   margin:auto;
+  padding:5px 14px 28px;
+  display:flex;
+  flex-direction:column;
+  gap:8px;
+}
+
+.card{
+  min-height:64px;
   display:grid;
-  grid-template-columns:repeat(5,1fr);
-  gap:12px;
+  grid-template-columns:45px 1fr 32px;
+  align-items:center;
+  gap:9px;
+  padding:8px 10px;
+  border-radius:13px;
+  border:1px solid rgba(8,44,99,.09);
+  box-shadow:0 4px 12px rgba(8,44,99,.07);
 }
 
-.link-card{
-  text-decoration:none;
-  color:var(--navy);
-  text-align:center;
-  padding:16px 8px;
-  border-radius:15px;
-  transition:.2s ease;
-}
-
-.link-card:hover{
-  transform:translateY(-3px);
-  background:var(--cream);
-}
-
-.link-icon{
-  width:48px;
-  height:48px;
-  margin:0 auto 7px;
-  border-radius:50%;
+.card-icon,
+.card-arrow{
   display:flex;
   align-items:center;
   justify-content:center;
-  color:white;
-  font-size:22px;
-  font-weight:800;
+  border-radius:50%;
+  color:#fff;
 }
 
-.link-card strong{
+.card-icon{
+  width:39px;
+  height:39px;
+  font-size:17px;
+}
+
+.card-arrow{
+  width:28px;
+  height:28px;
+  font-size:20px;
+}
+
+.card strong{
   display:block;
   font-family:'Baloo 2',sans-serif;
-  font-size:14px;
+  font-size:15px;
+  line-height:1;
 }
 
-.shop .link-icon{
+.card small{
+  display:block;
+  margin-top:2px;
+  font-size:9.5px;
+  color:var(--navy);
+}
+
+.store{
+  background:linear-gradient(90deg,#fff,#FFF3F7);
+}
+.store .card-icon,
+.store .card-arrow{
   background:var(--fuchsia);
 }
-
-.free .link-icon{
-  background:var(--teal);
+.store strong{
+  color:var(--fuchsia);
 }
 
-.fb .link-icon{
+.free{
+  background:linear-gradient(90deg,#fff,#EFFCFC);
+}
+.free .card-icon,
+.free .card-arrow{
+  background:var(--teal);
+}
+.free strong{
+  color:var(--teal);
+}
+
+.facebook{
+  background:linear-gradient(90deg,#fff,#F2F6FF);
+}
+.facebook .card-icon,
+.facebook .card-arrow{
   background:var(--blue);
 }
+.facebook strong{
+  color:var(--blue);
+}
 
-.ig .link-icon{
+.instagram{
+  background:linear-gradient(90deg,#fff,#FFF2F7);
+}
+.instagram .card-icon,
+.instagram .card-arrow{
   background:var(--fuchsia);
 }
+.instagram strong{
+  color:var(--fuchsia);
+}
 
-.mail .link-icon{
+.contact{
+  background:linear-gradient(90deg,#fff,#EFFCFC);
+}
+.contact .card-icon,
+.contact .card-arrow{
   background:var(--teal);
 }
+.contact strong{
+  color:var(--teal);
+}
 
-/* ==============================
+/* =========================
    FOOTER
-============================== */
+========================= */
 
 footer{
-  background:#061F47;
-  color:white;
+  background:var(--navy);
+  color:#fff;
   text-align:center;
-  padding:30px 20px 25px;
+  padding:25px 18px 20px;
 }
 
-.footer-title{
-  font-family:'Baloo 2',sans-serif;
-  font-size:25px;
-  line-height:1.1;
+.footer-script{
+  font-family:'Allura',cursive;
+  font-size:34px;
+  line-height:1;
 }
 
-.footer-title span{
+.footer-script span{
   color:var(--pink);
 }
 
 footer p{
-  margin:8px auto 0;
-  max-width:600px;
-  font-size:13px;
-  line-height:1.5;
+  margin:6px auto 0;
+  max-width:500px;
+  font-size:10px;
 }
 
 .copyright{
-  margin-top:16px;
-  font-size:10px;
-  opacity:.75;
+  margin-top:12px;
+  font-size:8px;
+  opacity:.8;
 }
 
-/* ==============================
-   TABLET Y CELULAR
-============================== */
+/* =========================
+   MOBILE
+========================= */
 
-@media(max-width:800px){
+@media(max-width:700px){
 
-  .topbar{
-    padding:10px 18px;
+  .header-inner{
+    min-height:60px;
+    padding:7px 11px;
   }
 
-  .brand{
-    font-size:18px;
+  .logo{
+    width:42px;
+    height:42px;
   }
 
-  .brand-ai{
-    width:36px;
-    height:36px;
-    font-size:18px;
+  .brand-text{
+    font-size:28px;
   }
 
-  .nav{
+  .header-link{
     display:none;
   }
 
+  .shop-button{
+    font-size:8px;
+    padding:7px 10px;
+  }
+
   .hero-inner{
-    min-height:auto;
-    grid-template-columns:1fr;
-    padding:36px 20px 0;
-    gap:12px;
-    text-align:left;
+    min-height:250px;
+    padding:18px 12px 0;
+    grid-template-columns:1fr 1fr;
+    gap:5px;
   }
 
-  .hero-pro h1{
-    font-size:clamp(39px,12vw,57px);
+  .hero-copy{
+    padding-bottom:17px;
   }
 
-  .hero-pro p{
-    margin:17px 0 21px;
+  .hero-kicker{
+    font-size:7px;
+  }
+
+  .hero h1{
+    font-size:29px;
+  }
+
+  .hero p{
+    font-size:8.5px;
+    line-height:1.3;
+    margin:7px 0 9px;
+  }
+
+  .mini-pill{
+    padding:4px 6px;
+    font-size:6.5px;
+  }
+
+  .hero-image{
+    width:100%;
+    max-height:230px;
+  }
+
+  .middle-inner{
+    min-height:86px;
+    padding:8px 11px;
+    gap:7px;
+  }
+
+  .middle-image{
+    max-height:76px;
+  }
+
+  .middle-title{
+    font-size:25px;
+  }
+
+  .feature-inner{
+    min-height:225px;
+    padding:16px 12px 0;
+    grid-template-columns:1fr 1fr;
+    gap:7px;
+  }
+
+  .feature-copy{
+    padding-bottom:14px;
+  }
+
+  .feature-kicker{
+    font-size:7px;
+  }
+
+  .feature h2{
+    font-size:23px;
+  }
+
+  .feature p{
+    margin:7px 0 9px;
+    font-size:8.5px;
+    line-height:1.3;
+  }
+
+  .feature-image{
+    max-height:210px;
+  }
+
+  .cta-main{
+    font-size:18px;
+  }
+
+  .cta-sub{
+    font-size:8px;
+  }
+
+  .brand-script{
+    font-size:41px;
+  }
+
+  .brand-tagline{
+    font-size:9px;
+  }
+
+  .card{
+    min-height:58px;
+    grid-template-columns:42px 1fr 28px;
+  }
+
+  .card-icon{
+    width:36px;
+    height:36px;
     font-size:15px;
   }
 
-  .hero-buttons{
-    gap:9px;
-  }
-
-  .btn{
-    min-height:44px;
-    padding:10px 17px;
-    font-size:11px;
-  }
-
-  .hero-pro-visual{
-    margin-top:5px;
-  }
-
-  .hero-product{
-    width:88%;
-    max-width:390px;
-    max-height:none;
-    margin:0 auto;
-  }
-
-  .brand-intro{
-    padding:28px 18px;
-  }
-
-  .brand-intro h2{
-    font-size:30px;
-  }
-
-  .brand-intro p{
+  .card strong{
     font-size:14px;
   }
 
-  .product-row,
-  .reverse.product-row{
-    min-height:auto;
-    grid-template-columns:1fr;
-    padding:30px 20px 0;
-    gap:0;
+  .card small{
+    font-size:8.7px;
   }
 
-  .product-copy,
-  .reverse .product-copy{
-    order:1;
-    padding:12px 2px 22px;
+  .card-arrow{
+    width:26px;
+    height:26px;
+    font-size:18px;
   }
 
-  .product-visual,
-  .reverse .product-visual{
-    order:2;
-    min-height:0;
+  .footer-script{
+    font-size:28px;
   }
 
-  .product-copy h2{
-    font-size:38px;
-  }
-
-  .product-copy p{
-    font-size:15px;
-  }
-
-  .product-visual img{
-    width:86%;
-    max-width:390px;
-    max-height:none;
-  }
-
-  .digital-strip{
-    padding:22px 20px;
-  }
-
-  .digital-strip-inner{
-    display:block;
-    text-align:center;
-  }
-
-  .digital-strip strong{
-    font-size:22px;
-  }
-
-  .links-area{
-    padding:20px 12px 30px;
-  }
-
-  .links{
-    grid-template-columns:repeat(5,1fr);
-    gap:3px;
-  }
-
-  .link-card{
-    padding:10px 2px;
-  }
-
-  .link-icon{
-    width:42px;
-    height:42px;
-    font-size:19px;
-  }
-
-  .link-card strong{
-    font-size:10px;
-  }
-}
-
-@media(max-width:430px){
-
-  .hero-inner{
-    padding-left:18px;
-    padding-right:18px;
-  }
-
-  .hero-tag{
-    font-size:11px;
-  }
-
-  .hero-pro h1{
-    font-size:42px;
-  }
-
-  .hero-product{
-    width:94%;
-  }
-
-  .product-copy h2{
-    font-size:34px;
-  }
-
-  .product-visual img{
-    width:94%;
-  }
-
-  .mini-benefits span{
-    font-size:10px;
+  footer p{
+    font-size:8.5px;
   }
 }
 
@@ -668,70 +692,80 @@ footer p{
 
 <body>
 
-<!-- BARRA SUPERIOR -->
+<div class="page">
 
-<header class="topbar">
-  <div class="topbar-inner">
+<!-- HEADER -->
+<header class="header">
+  <div class="header-inner">
 
-    <div class="brand">
-      <div class="brand-ai">Ai</div>
-      <div class="brand-name">Aula <span>Inclusiva</span></div>
+    <a href="#" class="brand">
+      <img
+        src="423D824D-8ED0-430D-ACD6-305BBFB3C303.png"
+        class="logo"
+        alt="Logo Aula Inclusiva">
+
+      <div class="brand-text">
+        Aula <span>Inclusiva</span>
+      </div>
+    </a>
+
+    <div class="header-right">
+
+      <a class="header-link" href="#productos">
+        Productos
+      </a>
+
+      <a class="header-link" href="#enlaces">
+        Enlaces
+      </a>
+
+      <a
+        class="shop-button"
+        href="https://payhip.com/AulaInclusiva"
+        target="_blank"
+        rel="noopener">
+        TIENDA
+      </a>
+
     </div>
-
-    <nav class="nav">
-      <a href="#inicio">INICIO</a>
-      <a href="#productos">PRODUCTOS</a>
-      <a href="#recursos">RECURSOS GRATIS</a>
-      <a href="#contacto">CONTACTO</a>
-    </nav>
 
   </div>
 </header>
 
 
-<!-- HERO / AGENDA -->
-
-<section class="hero-pro" id="inicio">
+<!-- HERO -->
+<section class="hero">
 
   <div class="hero-inner">
 
-    <div class="hero-pro-text">
+    <div class="hero-copy">
 
-      <span class="hero-tag">
-        RECURSOS PARA DOCENTES
-      </span>
+      <div class="hero-kicker">
+        RECURSOS DIGITALES PARA DOCENTES
+      </div>
 
       <h1>
-        TU ALIADO<br>
-        <span class="accent">EN CADA PLAN</span>
+        TU ALIADO
+        <span>EN CADA PLAN</span>
       </h1>
 
       <p>
-        Recursos digitales diseñados para ayudarte a organizar,
+        Recursos digitales que te ayudan a organizar,
         planificar e inspirar cada día en tu aula.
       </p>
 
-      <div class="hero-buttons">
-        <a href="https://payhip.com/AulaInclusiva"
-           target="_blank"
-           rel="noopener"
-           class="btn btn-primary">
-          VER PRODUCTOS
-        </a>
-
-        <a href="#recursos"
-           class="btn btn-secondary">
-          RECURSOS GRATIS
-        </a>
+      <div class="mini-pills">
+        <span class="mini-pill">⚡ AHORRA TIEMPO</span>
+        <span class="mini-pill">✓ ORGANÍZATE</span>
       </div>
 
     </div>
 
-    <div class="hero-pro-visual">
+    <div class="hero-image-wrap">
 
       <img
-        src="3FE8CBAA-6E3E-477D-9316-25F204B6F815.png"
-        class="hero-product"
+        src="9AF8243A-2208-42AB-9980-F6413B78F047.png"
+        class="hero-image"
         alt="Agenda Profesional Aula Inclusiva">
 
     </div>
@@ -741,65 +775,112 @@ footer p{
 </section>
 
 
-<!-- IDENTIDAD -->
+<!-- NAVY STRIP -->
+<section class="middle-strip">
 
-<section class="brand-intro">
+  <div class="middle-inner">
 
-  <h2>
-    ✨ AULA <span>INCLUSIVA</span> ✨
-  </h2>
+    <div class="middle-image-wrap">
 
-  <p>
-    Productos digitales y más para facilitar tu labor
-    e inspirar el aprendizaje.
-  </p>
+      <img
+        src="1F614927-1907-40CD-9CCC-6EE6CE6A6256.png"
+        class="middle-image"
+        alt="Libreta de Planes">
+
+    </div>
+
+    <div class="middle-title">
+      TODO EN UN<br>
+      <span>SOLO LUGAR</span>
+    </div>
+
+  </div>
 
 </section>
 
 
-<!-- PRODUCTO 1 -->
+<div id="productos"></div>
 
-<section class="product-section white" id="productos">
 
-  <div class="product-row">
+<!-- LIBRETA -->
+<section class="feature feature-pink">
 
-    <div class="product-visual">
+  <div class="feature-inner">
+
+    <div class="feature-copy">
+
+      <div class="feature-kicker">
+        LISTO PARA USAR
+      </div>
+
+      <h2>
+        Organiza tus<br>
+        <span>planes.</span>
+      </h2>
+
+      <p>
+        Herramientas prácticas diseñadas para ayudarte
+        a planificar, ahorrar tiempo y mantener todo organizado.
+      </p>
+
+      <div class="mini-pills">
+        <span class="mini-pill">✓ PRÁCTICO</span>
+        <span class="mini-pill">✓ PARA DOCENTES</span>
+      </div>
+
+    </div>
+
+    <div class="feature-image-wrap">
 
       <img
-        src="0AADD27B-F7BB-4C87-96DB-96AD6F3F09E5.png"
+        src="FE9356E8-3AFE-422D-850C-0A21D81FA62D.png"
+        class="feature-image"
         alt="Libreta de Planes Aula Inclusiva">
 
     </div>
 
-    <div class="product-copy">
+  </div>
 
-      <div class="product-icon">🎁</div>
+</section>
+
+
+<!-- BITÁCORA -->
+<section class="feature feature-blue">
+
+  <div class="feature-inner reverse">
+
+    <div class="feature-copy">
+
+      <div class="feature-kicker">
+        REGISTRA Y DA SEGUIMIENTO
+      </div>
 
       <h2>
-        DISEÑADA<br>
-        PARA <span>DOCENTES</span>
+        Información<br>
+        <span>organizada.</span>
       </h2>
 
       <p>
-        Herramientas prácticas que te ayudan a ahorrar tiempo,
-        organizar tu trabajo y enfocarte en lo verdaderamente
-        importante.
+        Documenta incidencias y facilita el seguimiento
+        con un recurso práctico y claro.
       </p>
 
-      <div class="mini-benefits">
-        <span>⏱ AHORRA TIEMPO</span>
-        <span>💙 ORGANIZA TU AULA</span>
-      </div>
+      <a
+        class="shop-button"
+        href="https://payhip.com/AulaInclusiva"
+        target="_blank"
+        rel="noopener">
+        VER RECURSOS
+      </a>
 
-      <p>
-        <a
-          href="https://payhip.com/AulaInclusiva"
-          target="_blank"
-          rel="noopener"
-          class="btn btn-primary">
-          EXPLORAR
-        </a>
-      </p>
+    </div>
+
+    <div class="feature-image-wrap">
+
+      <img
+        src="83B722A1-E52B-445E-BDAC-8C14147D9C28.png"
+        class="feature-image"
+        alt="Bitácora de Incidencias">
 
     </div>
 
@@ -808,76 +889,25 @@ footer p{
 </section>
 
 
-<!-- PRODUCTO 2 -->
+<!-- PLANES CLAROS -->
+<section class="feature feature-white">
 
-<section class="product-section soft-pink">
+  <div class="feature-inner">
 
-  <div class="product-row reverse">
+    <div class="feature-image-wrap">
 
-    <div class="product-copy">
+      <img
+        src="FE9356E8-3AFE-422D-850C-0A21D81FA62D.png"
+        class="feature-image"
+        alt="Libreta de Planes Digital">
 
-      <div class="product-icon">↓</div>
+    </div>
 
-      <h2>
-        REGISTRA,<br>
-        ORGANIZA Y DA<br>
-        <span>SEGUIMIENTO</span>
-      </h2>
+    <div class="feature-copy">
 
-      <p>
-        Documenta incidencias y mantén la información organizada
-        para facilitar el seguimiento y apoyar un ambiente escolar
-        positivo.
-      </p>
-
-      <div class="mini-benefits">
-        <span>✓ PRÁCTICA</span>
-        <span>✓ ORGANIZADA</span>
-        <span>✓ LISTA PARA USAR</span>
+      <div class="feature-kicker">
+        PLANIFICACIÓN CREATIVA
       </div>
-
-      <p>
-        <a
-          href="https://payhip.com/AulaInclusiva"
-          target="_blank"
-          rel="noopener"
-          class="btn btn-primary">
-          VER RECURSOS
-        </a>
-      </p>
-
-    </div>
-
-    <div class="product-visual">
-
-      <img
-        src="3952FEED-D082-4F0D-B2BE-E2930B2E2AB3.jpeg"
-        alt="Bitácora de Incidencias Aula Inclusiva">
-
-    </div>
-
-  </div>
-
-</section>
-
-
-<!-- PRODUCTO 3 -->
-
-<section class="product-section soft-blue">
-
-  <div class="product-row">
-
-    <div class="product-visual">
-
-      <img
-        src="426E48FD-7887-4B9A-A54F-367BCB4E015E.png"
-        alt="Libreta de Planes digital Aula Inclusiva">
-
-    </div>
-
-    <div class="product-copy">
-
-      <div class="product-icon">♡</div>
 
       <h2>
         PLANES CLAROS<br>
@@ -885,26 +915,17 @@ footer p{
       </h2>
 
       <p>
-        Todo en un solo lugar para organizar tus planes,
-        facilitar tu labor e inspirar el aprendizaje de tus
-        estudiantes.
+        Todo en un solo lugar para facilitar tu labor
+        e inspirar el aprendizaje de tus estudiantes.
       </p>
 
-      <div class="mini-benefits">
-        <span>✦ CREATIVO</span>
-        <span>✦ PRÁCTICO</span>
-        <span>✦ PARA DOCENTES</span>
-      </div>
-
-      <p>
-        <a
-          href="https://payhip.com/AulaInclusiva"
-          target="_blank"
-          rel="noopener"
-          class="btn btn-primary">
-          EXPLÓRALA HOY
-        </a>
-      </p>
+      <a
+        class="shop-button"
+        href="https://payhip.com/AulaInclusiva"
+        target="_blank"
+        rel="noopener">
+        EXPLÓRALA HOY
+      </a>
 
     </div>
 
@@ -913,105 +934,131 @@ footer p{
 </section>
 
 
-<!-- FRANJA -->
+<!-- CTA -->
+<section class="cta-bar">
 
-<section class="digital-strip">
+  <div class="cta-main">
+    PRODUCTOS <span>DIGITALES Y MÁS</span>
+  </div>
 
-  <div class="digital-strip-inner">
-
-    <div>
-      <strong>
-        PRODUCTOS <span>DIGITALES Y MÁS</span>
-      </strong>
-
-      <p>
-        para facilitar tu labor e inspirar el aprendizaje.
-      </p>
-    </div>
-
-    <div>
-      ✨ 💗 ✦ 💙 ✨
-    </div>
-
+  <div class="cta-sub">
+    para facilitar tu labor e inspirar el aprendizaje.
   </div>
 
 </section>
 
 
-<!-- ENLACES -->
+<!-- BRAND -->
+<section class="brand-section">
 
-<section class="links-area" id="recursos">
+  <h2 class="brand-script">
+    Aula <span>Inclusiva</span>
+  </h2>
 
-  <div class="links">
+  <div class="brand-tagline">
+    💗 Productos digitales y más para facilitar tu labor
+    e inspirar el aprendizaje. 💙
+  </div>
 
-    <a
-      class="link-card shop"
-      href="https://payhip.com/AulaInclusiva"
-      target="_blank"
-      rel="noopener">
+</section>
 
-      <div class="link-icon">🛍</div>
+
+<!-- LINKS -->
+<section class="links" id="enlaces">
+
+  <a
+    class="card store"
+    href="https://payhip.com/AulaInclusiva"
+    target="_blank"
+    rel="noopener">
+
+    <div class="card-icon">🛍</div>
+
+    <div>
       <strong>TIENDA</strong>
+      <small>Explora nuestras agendas, libretas y recursos.</small>
+    </div>
 
-    </a>
+    <div class="card-arrow">›</div>
+
+  </a>
 
 
-    <a
-      class="link-card free"
-      href="https://payhip.com/b/oeNMR"
-      target="_blank"
-      rel="noopener">
+  <a
+    class="card free"
+    href="https://payhip.com/b/oeNMR"
+    target="_blank"
+    rel="noopener">
 
-      <div class="link-icon">🎁</div>
+    <div class="card-icon">🎁</div>
+
+    <div>
       <strong>RECURSOS GRATIS</strong>
+      <small>Descarga materiales exclusivos para docentes.</small>
+    </div>
 
-    </a>
+    <div class="card-arrow">›</div>
+
+  </a>
 
 
-    <a
-      class="link-card fb"
-      href="https://www.facebook.com/profile.php?id=61590578286474"
-      target="_blank"
-      rel="noopener">
+  <a
+    class="card facebook"
+    href="https://www.facebook.com/profile.php?id=61590578286474"
+    target="_blank"
+    rel="noopener">
 
-      <div class="link-icon">f</div>
+    <div class="card-icon">f</div>
+
+    <div>
       <strong>FACEBOOK</strong>
+      <small>Síguenos y únete a nuestra comunidad.</small>
+    </div>
 
-    </a>
+    <div class="card-arrow">›</div>
+
+  </a>
 
 
-    <a
-      class="link-card ig"
-      href="https://www.instagram.com/aula.inclusiva26/"
-      target="_blank"
-      rel="noopener">
+  <a
+    class="card instagram"
+    href="https://www.instagram.com/aula.inclusiva26/"
+    target="_blank"
+    rel="noopener">
 
-      <div class="link-icon">◎</div>
+    <div class="card-icon">◎</div>
+
+    <div>
       <strong>INSTAGRAM</strong>
+      <small>Ideas, tips y recursos para inspirar tu día a día.</small>
+    </div>
 
-    </a>
+    <div class="card-arrow">›</div>
+
+  </a>
 
 
-    <a
-      class="link-card mail"
-      id="contacto"
-      href="mailto:aulainclusiva26@gmail.com">
+  <a
+    class="card contact"
+    href="mailto:aulainclusiva26@gmail.com">
 
-      <div class="link-icon">✉</div>
+    <div class="card-icon">✉</div>
+
+    <div>
       <strong>CONTACTO</strong>
+      <small>¿Tienes preguntas? Estoy aquí para ayudarte.</small>
+    </div>
 
-    </a>
+    <div class="card-arrow">›</div>
 
-  </div>
+  </a>
 
 </section>
 
-
-<!-- FOOTER -->
 
 <footer>
 
-  <div class="footer-title">
+  <div class="footer-script">
     Gracias por ser parte de
     <span>Aula Inclusiva</span>
   </div>
@@ -1026,6 +1073,8 @@ footer p{
   </div>
 
 </footer>
+
+</div>
 
 </body>
 </html>
