@@ -3,193 +3,456 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Aula Inclusiva · Enlaces</title>
+
+<title>Aula Inclusiva</title>
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Baloo+2:wght@500;600;700;800&family=Quicksand:wght@500;600;700&display=swap" rel="stylesheet">
+
 <style>
-  :root{
-    --navy:#082C63;
-    --pink:#F894B2;
-    --teal:#82CBCC;
-    --lilac:#A38FC5;
-    --cream:#FBF8F4;
+:root{
+  --navy:#082C63;
+  --pink:#F894B2;
+  --fuchsia:#EB2E7A;
+  --teal:#28B9C3;
+  --blue:#1359A6;
+  --cream:#FFF8F6;
+}
+
+*{
+  box-sizing:border-box;
+}
+
+body{
+  margin:0;
+  background:var(--cream);
+  font-family:'Quicksand',sans-serif;
+  color:var(--navy);
+}
+
+/* BANNER */
+
+.hero{
+  width:100%;
+  overflow:hidden;
+  background:#fff;
+}
+
+.desktop-banner{
+  display:block;
+  width:100%;
+  height:auto;
+}
+
+.mobile-banner{
+  display:none;
+}
+
+/* TITULO */
+
+.intro{
+  text-align:center;
+  background:#fff;
+  padding:25px 18px 18px;
+}
+
+.intro h1{
+  margin:0;
+  font-family:'Baloo 2',sans-serif;
+  font-size:34px;
+  font-weight:800;
+  letter-spacing:1px;
+}
+
+.intro p{
+  margin:3px auto 0;
+  max-width:650px;
+  font-size:16px;
+  font-weight:600;
+  line-height:1.4;
+}
+
+/* BOTONES */
+
+.links{
+  max-width:760px;
+  margin:auto;
+  padding:12px 18px 35px;
+  display:flex;
+  flex-direction:column;
+  gap:11px;
+}
+
+.card{
+  text-decoration:none;
+  color:var(--navy);
+  background:#fff;
+  border:1px solid rgba(8,44,99,.12);
+  border-radius:13px;
+  min-height:82px;
+  padding:11px 14px;
+  display:grid;
+  grid-template-columns:58px 1fr 42px;
+  grid-template-rows:auto auto;
+  align-items:center;
+  column-gap:13px;
+  box-shadow:0 5px 14px rgba(8,44,99,.08);
+}
+
+.icon{
+  grid-row:1 / 3;
+  width:52px;
+  height:52px;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:#fff;
+  font-size:25px;
+  font-weight:800;
+  border:3px solid #fff;
+  box-shadow:0 0 0 3px currentColor;
+}
+
+.card-title{
+  font-family:'Baloo 2',sans-serif;
+  font-size:19px;
+  font-weight:800;
+  line-height:1;
+}
+
+.card-sub{
+  font-size:12.5px;
+  margin-top:3px;
+  line-height:1.25;
+}
+
+.arrow{
+  grid-column:3;
+  grid-row:1 / 3;
+  width:38px;
+  height:38px;
+  border-radius:50%;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+  color:#fff;
+  font-size:29px;
+  font-weight:700;
+}
+
+/* TIENDA */
+
+.tienda{
+  background:linear-gradient(90deg,#fff,#FFF3F7);
+}
+
+.tienda .icon,
+.tienda .arrow{
+  background:var(--fuchsia);
+}
+
+.tienda .card-title{
+  color:var(--fuchsia);
+}
+
+/* RECURSOS GRATIS */
+
+.recursos{
+  background:linear-gradient(90deg,#fff,#EFFCFC);
+}
+
+.recursos .icon,
+.recursos .arrow{
+  background:var(--teal);
+}
+
+.recursos .card-title{
+  color:var(--teal);
+}
+
+/* FACEBOOK */
+
+.facebook{
+  background:linear-gradient(90deg,#fff,#F3F7FF);
+}
+
+.facebook .icon,
+.facebook .arrow{
+  background:var(--blue);
+}
+
+.facebook .card-title{
+  color:var(--blue);
+}
+
+/* INSTAGRAM */
+
+.instagram{
+  background:linear-gradient(90deg,#fff,#FFF2F7);
+}
+
+.instagram .icon,
+.instagram .arrow{
+  background:var(--fuchsia);
+}
+
+.instagram .card-title{
+  color:var(--fuchsia);
+}
+
+/* CONTACTO */
+
+.contacto{
+  background:linear-gradient(90deg,#fff,#EFFCFC);
+}
+
+.contacto .icon,
+.contacto .arrow{
+  background:var(--teal);
+}
+
+.contacto .card-title{
+  color:var(--teal);
+}
+
+/* FOOTER */
+
+footer{
+  background:var(--navy);
+  color:white;
+  text-align:center;
+  padding:30px 20px 24px;
+}
+
+.footer-title{
+  font-family:'Baloo 2',sans-serif;
+  font-size:25px;
+  line-height:1.2;
+}
+
+.footer-title span{
+  display:block;
+  color:#F33C8A;
+}
+
+footer p{
+  margin:8px auto 0;
+  max-width:520px;
+  font-size:15px;
+  line-height:1.4;
+}
+
+.copyright{
+  font-size:11px;
+  margin-top:18px;
+  opacity:.85;
+}
+
+/* CELULAR */
+
+@media(max-width:700px){
+
+  .desktop-banner{
+    display:none;
   }
 
-  *{box-sizing:border-box;}
-
-  body{
-    margin:0;
-    min-height:100vh;
-    background:var(--cream);
-    background-image:
-      radial-gradient(circle at 8% 12%, rgba(163,143,197,0.14) 0, transparent 40%),
-      radial-gradient(circle at 92% 20%, rgba(130,203,204,0.16) 0, transparent 42%),
-      radial-gradient(circle at 12% 88%, rgba(248,148,178,0.14) 0, transparent 40%);
-    font-family:'Quicksand', sans-serif;
-    color:var(--navy);
-    display:flex;
-    justify-content:center;
-    padding:28px 16px 0;
-  }
-
-  .page{
-    width:100%;
-    max-width:460px;
-  }
-
-  .banner{
-    width:100%;
-    border-radius:22px;
-    overflow:hidden;
-    box-shadow:0 14px 30px -12px rgba(8,44,99,0.35);
-    border:3px solid var(--navy);
-  }
-  .banner img{
+  .mobile-banner{
     display:block;
     width:100%;
-    height:auto;
   }
 
-  .links{
-    margin-top:26px;
-    display:flex;
-    flex-direction:column;
-    gap:14px;
+  .banner-piece{
+    width:100%;
+    background-image:url('58CF3422-45D2-426B-8A53-EF60D2EABC66.png');
+    background-repeat:no-repeat;
+    background-size:400% auto;
   }
 
-  .link-card{
-    --accent: var(--teal);
-    position:relative;
-    display:flex;
-    align-items:center;
-    gap:14px;
-    background:#fff;
-    border:2px solid var(--navy);
-    border-radius:18px;
-    padding:14px 18px;
-    text-decoration:none;
-    color:var(--navy);
-    box-shadow:0 3px 0 var(--navy);
-    transition:transform .15s ease, box-shadow .15s ease;
-  }
-  .link-card:hover, .link-card:focus-visible{
-    transform:translate(-2px,-2px);
-    box-shadow:5px 5px 0 var(--navy);
-    outline:none;
-  }
-  .link-card:active{
-    transform:translate(0,0);
-    box-shadow:1px 1px 0 var(--navy);
+  .piece1{
+    height:225px;
+    background-position:0% center;
   }
 
-  .icon-wrap{
-    flex:none;
-    width:46px;
-    height:46px;
-    border-radius:50%;
-    background:var(--accent);
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    box-shadow:0 0 0 3px #fff, 0 0 0 5px var(--accent);
-  }
-  .icon-wrap svg{width:22px;height:22px;fill:#fff;}
-
-  .link-text{flex:1;min-width:0;}
-  .link-title{
-    font-family:'Baloo 2', sans-serif;
-    font-weight:700;
-    font-size:1.02rem;
-    line-height:1.15;
-  }
-  .link-sub{
-    font-size:0.82rem;
-    color:#5b6a86;
-    margin-top:2px;
-    white-space:nowrap;
-    overflow:hidden;
-    text-overflow:ellipsis;
+  .piece2{
+    height:160px;
+    background-position:33.33% center;
+    background-color:var(--navy);
   }
 
-  .arrow{flex:none;color:var(--navy);opacity:.55;font-size:1.1rem;}
+  .piece3{
+    height:160px;
+    background-position:66.66% center;
+  }
 
-  .tienda{--accent:var(--purple, var(--lilac));}
-  .facebook{--accent:#4267ff;}
-  .instagram{--accent:var(--pink);}
-  .correo{--accent:var(--teal);}
+  .piece4{
+    height:160px;
+    background-position:100% center;
+  }
 
-  .footer{
-    margin:30px -16px 0;
-    background:var(--pink);
-    padding:16px 16px 18px;
-    text-align:center;
-    border-top:3px solid var(--navy);
+  .intro h1{
+    font-size:30px;
   }
-  .footer-tagline{
-    font-family:'Baloo 2', sans-serif;
-    font-weight:700;
-    color:var(--navy);
-    font-size:1rem;
+
+  .intro p{
+    font-size:15px;
   }
-  .footer-tagline em{color:#fff;font-style:italic;}
-  .footer-brand{
-    margin-top:8px;
-    font-size:0.78rem;
-    color:var(--navy);
-    opacity:.85;
-  }
+}
+
 </style>
 </head>
+
 <body>
-  <div class="page">
 
-    <div class="banner">
-      <img src="58CF3422-45D2-426B-8A53-EF60D2EABC66.png" alt="Aula Inclusiva — Recursos hechos con pasión para maestros que inspiran">
-    </div>
+<!-- BANNER -->
 
-    <nav class="links">
+<section class="hero">
 
-      <a class="link-card tienda" href="https://payhip.com/AulaInclusiva" target="_blank" rel="noopener">
-        <span class="icon-wrap" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><path d="M6 2 3 7v13a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V7l-3-5H6zm2.5 9a3.5 3.5 0 0 0 7 0h2A5.5 5.5 0 0 1 6.5 11h2z"/></svg>
-        </span>
-        <span class="link-text">
-          <div class="link-title">Explora la tienda</div>
-          <div class="link-sub">Recursos listos para tu salón</div>
-        </span>
-        <span class="arrow">→</span>
-      </a>
+<img
+  class="desktop-banner"
+  src="58CF3422-45D2-426B-8A53-EF60D2EABC66.png"
+  alt="Aula Inclusiva"
+>
 
-      <a class="link-card facebook" href="https://www.facebook.com/profile.php?id=61590578286474" target="_blank" rel="noopener">
-        <span class="icon-wrap" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><path d="M13.5 21v-7.2h2.4l.4-2.8h-2.8V9.1c0-.8.2-1.4 1.4-1.4h1.5V5.2C15.9 5.1 15 5 14 5c-2.2 0-3.7 1.3-3.7 3.8v2.2H7.9v2.8h2.4V21h3.2z"/></svg>
-        </span>
-        <span class="link-text">
-          <div class="link-title">Escríbenos por Facebook</div>
-          <div class="link-sub">@aulainclusiva</div>
-        </span>
-        <span class="arrow">→</span>
-      </a>
+<div class="mobile-banner">
+  <div class="banner-piece piece1"></div>
+  <div class="banner-piece piece2"></div>
+  <div class="banner-piece piece3"></div>
+  <div class="banner-piece piece4"></div>
+</div>
 
-      <a class="link-card correo" href="mailto:aulainclusiva26@gmail.com">
-        <span class="icon-wrap" aria-hidden="true">
-          <svg viewBox="0 0 24 24"><path d="M4 4h16a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm0 2v.01L12 12l8-5.99V6H4zm16 12V8.24l-7.4 5.55a1 1 0 0 1-1.2 0L4 8.24V18h16z"/></svg>
-        </span>
-        <span class="link-text">
-          <div class="link-title">Envíanos un correo</div>
-          <div class="link-sub">aulainclusiva26@gmail.com</div>
-        </span>
-        <span class="arrow">→</span>
-      </a>
-<a class="link-card instagram" href="https://www.instagram.com/aula.inclusiva26/" target="_blank" rel="noopener"><span class="link-text"><div class="link-title">Síguenos en Instagram</div><div class="link-sub">@aula.inclusiva26</div></span><span class="arrow">›</span></a>
-    </nav>
+</section>
 
-    <div class="footer">
-      <div class="footer-tagline">¡Porque enseñar con amor <em>transforma vidas!</em> 💗</div>
-      <div class="footer-brand">Aula Inclusiva · Recursos para maestros de educación especial</div>
-    </div>
 
-  </div>
+<!-- PRESENTACIÓN -->
+
+<section class="intro">
+
+<h1>✨ AULA INCLUSIVA ✨</h1>
+
+<p>
+💗 Productos digitales y más para facilitar tu labor<br>
+e inspirar el aprendizaje. 💙
+</p>
+
+</section>
+
+
+<!-- ENLACES -->
+
+<section class="links">
+
+
+<a class="card tienda"
+href="https://payhip.com/AulaInclusiva"
+target="_blank"
+rel="noopener">
+
+<div class="icon">🛍</div>
+
+<div class="card-title">TIENDA</div>
+
+<div class="card-sub">
+Explora nuestras agendas, libretas y recursos.
+</div>
+
+<div class="arrow">›</div>
+
+</a>
+
+
+<a class="card recursos"
+href="https://payhip.com/b/oeNMR"
+target="_blank"
+rel="noopener">
+
+<div class="icon">🎁</div>
+
+<div class="card-title">RECURSOS GRATIS</div>
+
+<div class="card-sub">
+Descarga materiales exclusivos para docentes.
+</div>
+
+<div class="arrow">›</div>
+
+</a>
+
+
+<a class="card facebook"
+href="https://www.facebook.com/profile.php?id=61590578286474"
+target="_blank"
+rel="noopener">
+
+<div class="icon">f</div>
+
+<div class="card-title">FACEBOOK</div>
+
+<div class="card-sub">
+Síguenos y únete a nuestra comunidad.
+</div>
+
+<div class="arrow">›</div>
+
+</a>
+
+
+<a class="card instagram"
+href="https://www.instagram.com/aula.inclusiva26/"
+target="_blank"
+rel="noopener">
+
+<div class="icon">◎</div>
+
+<div class="card-title">INSTAGRAM</div>
+
+<div class="card-sub">
+Ideas, tips y recursos para inspirar tu día a día.
+</div>
+
+<div class="arrow">›</div>
+
+</a>
+
+
+<a class="card contacto"
+href="mailto:aulainclusiva26@gmail.com">
+
+<div class="icon">✉</div>
+
+<div class="card-title">CONTACTO</div>
+
+<div class="card-sub">
+¿Tienes preguntas? Estoy aquí para ayudarte.
+</div>
+
+<div class="arrow">›</div>
+
+</a>
+
+</section>
+
+
+<!-- PIE DE PÁGINA -->
+
+<footer>
+
+<div class="footer-title">
+Gracias por ser parte de
+<span>Aula Inclusiva</span>
+</div>
+
+<p>
+Juntas hacemos la diferencia en la vida<br>
+de nuestros estudiantes. 💙
+</p>
+
+<div class="copyright">
+© 2026 Aula Inclusiva. Todos los derechos reservados.
+</div>
+
+</footer>
+
 </body>
 </html>
